@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="PL2JokeCategory" representedClassName="PL2JokeCategory" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="jokes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PL2JokeItem" inverseName="category" inverseEntity="PL2JokeItem" syncable="YES"/>
+        <relationship name="site" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PL2JokesSite" inverseName="categories" inverseEntity="PL2JokesSite" syncable="YES"/>
+    </entity>
+    <entity name="PL2JokeItem" representedClassName="PL2JokeItem" syncable="YES">
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PL2JokeCategory" inverseName="jokes" inverseEntity="PL2JokeCategory" syncable="YES"/>
+    </entity>
+    <entity name="PL2JokesSite" representedClassName="PL2JokesSite" syncable="YES">
+        <attribute name="encoding" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PL2JokeCategory" inverseName="site" inverseEntity="PL2JokeCategory" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="PL2JokesSite" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PL2JokeCategory" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PL2JokeItem" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

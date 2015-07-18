@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SitesViewController.h
 //  HumorCollection
 //
 //  Created by Nikolay Shubenkov on 18/07/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SitesViewController : UIViewController
 
 @end
-

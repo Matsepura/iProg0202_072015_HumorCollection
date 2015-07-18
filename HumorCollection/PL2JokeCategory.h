@@ -1,5 +1,5 @@
 //
-//  JokeCategory.h
+//  PL2JokeCategory.h
 //  HumorCollection
 //
 //  Created by Nikolay Shubenkov on 18/07/15.
@@ -14,8 +14,9 @@
 @interface PL2JokeCategory : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) PL2JokesSite *site;
+@property (nonatomic, retain) NSString * url;
 @property (nonatomic, retain) NSSet *jokes;
+@property (nonatomic, retain) PL2JokesSite *site;
 @end
 
 @interface PL2JokeCategory (CoreDataGeneratedAccessors)

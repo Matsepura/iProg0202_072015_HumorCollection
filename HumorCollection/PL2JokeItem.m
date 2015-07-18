@@ -1,5 +1,5 @@
 //
-//  JokeItem.m
+//  PL2JokeItem.m
 //  HumorCollection
 //
 //  Created by Nikolay Shubenkov on 18/07/15.
@@ -12,6 +12,8 @@
 
 @implementation PL2JokeItem
 
+@dynamic link;
+@dynamic text;
 @dynamic category;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  JokesSite.m
+//  PL2JokesSite.m
 //  HumorCollection
 //
 //  Created by Nikolay Shubenkov on 18/07/15.
@@ -12,8 +12,8 @@
 
 @implementation PL2JokesSite
 
-@dynamic name;
 @dynamic encoding;
+@dynamic name;
 @dynamic categories;
 
 @end

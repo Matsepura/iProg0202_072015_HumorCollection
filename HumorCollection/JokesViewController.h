@@ -1,5 +1,5 @@
 //
-//  CategoryViewController.h
+//  JokesViewController.h
 //  HumorCollection
 //
 //  Created by Nikolay Shubenkov on 18/07/15.
@@ -8,10 +8,10 @@
 
 #import "PSRCoreDataTableViewController.h"
 
-@class PL2JokesSite;
+#import "PL2JokeCategory.h"
 
-@interface CategoryViewController : PSRCoreDataTableViewController
+@interface JokesViewController : PSRCoreDataTableViewController
 
-@property (nonatomic, strong) PL2JokesSite *site;
+@property (nonatomic, strong) PL2JokeCategory *category;
 
 @end

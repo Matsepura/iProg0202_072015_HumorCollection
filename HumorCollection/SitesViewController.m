@@ -8,6 +8,8 @@
 
 #import "SitesViewController.h"
 
+#import "CategoryViewController.h"
+
 #import "PL2JokesSite+Parsing.h"
 
 #import "AFNetworking.h"
@@ -37,12 +39,26 @@
     aCell.textLabel.text = item.name;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PL2JokesSite *site = (PL2JokesSite *)[self itemAtIndexPath:indexPath];
+    [self performSegueWithIdentifier:@"Show Category" sender:site];
+}
+
 #pragma mark - View Controller Life Cycle
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     [self updateSites];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[CategoryViewController class]]){
+        CategoryViewController *vc = segue.destinationViewController;
+        vc.site = sender;
+    }
 }
 
 #pragma mark - Data Update

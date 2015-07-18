@@ -2,10 +2,13 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="PL2JokeCategory" representedClassName="PL2JokeCategory" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="jokes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PL2JokeItem" inverseName="category" inverseEntity="PL2JokeItem" syncable="YES"/>
         <relationship name="site" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PL2JokesSite" inverseName="categories" inverseEntity="PL2JokesSite" syncable="YES"/>
     </entity>
     <entity name="PL2JokeItem" representedClassName="PL2JokeItem" syncable="YES">
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PL2JokeCategory" inverseName="jokes" inverseEntity="PL2JokeCategory" syncable="YES"/>
     </entity>
     <entity name="PL2JokesSite" representedClassName="PL2JokesSite" syncable="YES">
@@ -14,8 +17,8 @@
         <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PL2JokeCategory" inverseName="site" inverseEntity="PL2JokeCategory" syncable="YES"/>
     </entity>
     <elements>
-        <element name="PL2JokeCategory" positionX="-108" positionY="-324" width="128" height="90"/>
-        <element name="PL2JokeItem" positionX="90" positionY="-309" width="128" height="60"/>
+        <element name="PL2JokeCategory" positionX="-108" positionY="-324" width="128" height="103"/>
+        <element name="PL2JokeItem" positionX="90" positionY="-309" width="128" height="88"/>
         <element name="PL2JokesSite" positionX="-324" positionY="-333" width="128" height="88"/>
     </elements>
 </model>

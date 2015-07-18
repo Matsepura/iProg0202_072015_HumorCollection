@@ -1,5 +1,5 @@
 //
-//  JokeItem.h
+//  PL2JokeItem.h
 //  HumorCollection
 //
 //  Created by Nikolay Shubenkov on 18/07/15.
@@ -13,6 +13,8 @@
 
 @interface PL2JokeItem : NSManagedObject
 
+@property (nonatomic, retain) NSString * link;
+@property (nonatomic, retain) NSString * text;
 @property (nonatomic, retain) PL2JokeCategory *category;
 
 @end

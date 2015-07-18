@@ -1,21 +1,15 @@
 //
-//  PL2JokeCategory.m
+//  PL2JokeItem+Parsing.h
 //  HumorCollection
 //
 //  Created by Nikolay Shubenkov on 18/07/15.
 //  Copyright (c) 2015 Nikolay Shubenkov. All rights reserved.
 //
 
-#import "PL2JokeCategory.h"
 #import "PL2JokeItem.h"
-#import "PL2JokesSite.h"
 
+@interface PL2JokeItem (Parsing)
 
-@implementation PL2JokeCategory
-
-@dynamic name;
-@dynamic url;
-@dynamic jokes;
-@dynamic site;
++ (instancetype)jokeItemWithJSON:(NSDictionary *)json inContext:(NSManagedObjectContext *)context;
 
 @end

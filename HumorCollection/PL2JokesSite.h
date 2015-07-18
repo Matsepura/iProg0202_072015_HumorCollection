@@ -1,5 +1,5 @@
 //
-//  JokesSite.h
+//  PL2JokesSite.h
 //  HumorCollection
 //
 //  Created by Nikolay Shubenkov on 18/07/15.
@@ -13,8 +13,8 @@
 
 @interface PL2JokesSite : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * encoding;
+@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet *categories;
 @end
 

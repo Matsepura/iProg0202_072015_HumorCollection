@@ -20,6 +20,7 @@
 		4F854F531B5A482800894601 /* PL2JokesSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F854F521B5A482800894601 /* PL2JokesSite.m */; };
 		4F854F561B5A482900894601 /* PL2JokeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F854F551B5A482900894601 /* PL2JokeCategory.m */; };
 		4F854F591B5A482900894601 /* PL2JokeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F854F581B5A482900894601 /* PL2JokeItem.m */; };
+		4F854F5C1B5A52C600894601 /* PL2JokesSite+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F854F5B1B5A52C600894601 /* PL2JokesSite+Parsing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		4F854F551B5A482900894601 /* PL2JokeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PL2JokeCategory.m; sourceTree = "<group>"; };
 		4F854F571B5A482900894601 /* PL2JokeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PL2JokeItem.h; sourceTree = "<group>"; };
 		4F854F581B5A482900894601 /* PL2JokeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PL2JokeItem.m; sourceTree = "<group>"; };
+		4F854F5A1B5A52C600894601 /* PL2JokesSite+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PL2JokesSite+Parsing.h"; sourceTree = "<group>"; };
+		4F854F5B1B5A52C600894601 /* PL2JokesSite+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PL2JokesSite+Parsing.m"; sourceTree = "<group>"; };
 		75A3FCF3DEDD0ED7FDAFD811 /* Pods-HumorCollectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HumorCollectionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HumorCollectionTests/Pods-HumorCollectionTests.release.xcconfig"; sourceTree = "<group>"; };
 		7D04F3CCCBEE2A484A62EAB5 /* libPods-HumorCollection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HumorCollection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B23D05DE1BBB1C5C640F2C /* libPods-HumorCollectionTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HumorCollectionTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +161,8 @@
 		4F854F471B5A466E00894601 /* New CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				4F854F5A1B5A52C600894601 /* PL2JokesSite+Parsing.h */,
+				4F854F5B1B5A52C600894601 /* PL2JokesSite+Parsing.m */,
 				4F854F571B5A482900894601 /* PL2JokeItem.h */,
 				4F854F581B5A482900894601 /* PL2JokeItem.m */,
 				4F854F541B5A482900894601 /* PL2JokeCategory.h */,
@@ -351,6 +356,7 @@
 				4F854F181B5A33E000894601 /* AppDelegate.m in Sources */,
 				4F854F151B5A33E000894601 /* main.m in Sources */,
 				4F854F3D1B5A436800894601 /* SitesViewController.m in Sources */,
+				4F854F5C1B5A52C600894601 /* PL2JokesSite+Parsing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

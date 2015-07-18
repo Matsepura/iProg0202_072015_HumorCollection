@@ -8,6 +8,8 @@
 
 #import "PL2JokesSite+Parsing.h"
 
+#import "PL2JokeCategory+Parsing.h"
+
 #import "MagicalRecord.h"
 
 
@@ -41,17 +43,38 @@
     
     [aSite updateWithJSON:json];
     
-    return sites.firstObject;
+    return aSite;
 }
 
 - (void)updateWithJSON:(NSDictionary *)json
 {
     self.name       = json[@"site"];
-    self.url        = json[@"url"];
     self.encoding   = json[@"encoding"];
 }
 
++ (void)sitesFromJSONs:(NSArray *)jsons inContext:(NSManagedObjectContext *)context
+{
+    //Тут лежит массив из категорий сайта
+    for (NSArray *siteCategories in jsons) {
+        //пробежимся по каждой категории
+        for (NSDictionary *json in siteCategories) {
+            PL2JokesSite *site = [PL2JokesSite siteFromJSON:json inContext:context];
+            PL2JokeCategory *category = [PL2JokeCategory categoryFromJSON:json inContext:context];
+            [site addCategoriesObject:category];
+        }
+    }
+}
+
 @end
+
+
+
+
+
+
+
+
+
 
 
 

@@ -11,5 +11,6 @@
 @interface PL2JokesSite (Parsing)
 
 + (instancetype)siteFromJSON:(NSDictionary *)json inContext:(NSManagedObjectContext *)context;
++ (void)sitesFromJSONs:(NSArray *)jsons inContext:(NSManagedObjectContext *)context;
 
 @end

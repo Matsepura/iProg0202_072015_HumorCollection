@@ -58,13 +58,7 @@
         
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
             
-            //Тут лежит массив из категорий сайта
-            for (NSArray *siteCategories in responseObject) {
-                //пробежимся по каждой категории
-                for (NSDictionary *json in siteCategories) {
-                    [PL2JokesSite siteFromJSON:json inContext:localContext];
-                }
-            }
+            [PL2JokesSite sitesFromJSONs:responseObject inContext:localContext];
 
         } completion:^(BOOL contextDidSave, NSError *error) {
             NSLog(@"updated: %@ sites in dataBase",[PL2JokesSite MR_numberOfEntities]);
@@ -74,15 +68,6 @@
         NSLog(@"Ой! %@",error);
     }];
     [operation start];
-}
-
-- (void)clearSitesInContext:(NSManagedObjectContext *)localContext
-{
-    NSArray *sites = [PL2JokesSite MR_findAllInContext:localContext];
-    
-    for (PL2JokesSite *site  in sites) {
-        [site MR_deleteEntityInContext:localContext];
-    }
 }
 
 @end

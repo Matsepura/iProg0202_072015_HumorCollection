@@ -13,7 +13,6 @@
 
 @interface PL2JokesSite : NSManagedObject
 
-@property (nonatomic, retain) NSString * url;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * encoding;
 @property (nonatomic, retain) NSSet *categories;

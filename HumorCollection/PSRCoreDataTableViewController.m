@@ -42,7 +42,7 @@
 - (void)reloadFetchResultsController
 {
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:[self dataRequest]
-                                                                        managedObjectContext:[NSManagedObjectContext MR_context]
+                                                                        managedObjectContext:[NSManagedObjectContext MR_defaultContext]
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
 }

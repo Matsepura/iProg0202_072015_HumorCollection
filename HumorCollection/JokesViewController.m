@@ -54,7 +54,6 @@
     if(self.fetchedResultsController.fetchedObjects.count == 0){
         [self getJokes];
     }
-    
 }
 
 - (void)configureCell:(UITableViewCell *)aCell withItem:(PL2JokeItem *)item
@@ -67,7 +66,6 @@
     PL2JokeItem *item = [self  itemAtIndexPath:indexPath];
     [self performSegueWithIdentifier:@"Show Joke" sender:item];
 }
-
 
 - (void)getJokes
 {

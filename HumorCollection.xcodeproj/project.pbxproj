@@ -140,8 +140,6 @@
 				4F854F161B5A33E000894601 /* AppDelegate.h */,
 				4F854F171B5A33E000894601 /* AppDelegate.m */,
 				4F854F1C1B5A33E000894601 /* Main.storyboard */,
-				4F854F761B5A9C4D00894601 /* JokeViewController.h */,
-				4F854F771B5A9C4D00894601 /* JokeViewController.m */,
 				4F854F601B5A717A00894601 /* ViewControllers */,
 				4F854F1F1B5A33E000894601 /* Images.xcassets */,
 				4F854F211B5A33E000894601 /* LaunchScreen.xib */,
@@ -199,6 +197,8 @@
 		4F854F601B5A717A00894601 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4F854F761B5A9C4D00894601 /* JokeViewController.h */,
+				4F854F771B5A9C4D00894601 /* JokeViewController.m */,
 				4F854F671B5A953400894601 /* JokesViewController.h */,
 				4F854F681B5A953400894601 /* JokesViewController.m */,
 				4F854F641B5A8C2000894601 /* CategoryViewController.h */,

@@ -21,6 +21,7 @@
 		4F854F561B5A482900894601 /* PL2JokeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F854F551B5A482900894601 /* PL2JokeCategory.m */; };
 		4F854F591B5A482900894601 /* PL2JokeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F854F581B5A482900894601 /* PL2JokeItem.m */; };
 		4F854F5C1B5A52C600894601 /* PL2JokesSite+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F854F5B1B5A52C600894601 /* PL2JokesSite+Parsing.m */; };
+		4F854F5F1B5A714800894601 /* PSRCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F854F5E1B5A714800894601 /* PSRCoreDataTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		4F854F581B5A482900894601 /* PL2JokeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PL2JokeItem.m; sourceTree = "<group>"; };
 		4F854F5A1B5A52C600894601 /* PL2JokesSite+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PL2JokesSite+Parsing.h"; sourceTree = "<group>"; };
 		4F854F5B1B5A52C600894601 /* PL2JokesSite+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PL2JokesSite+Parsing.m"; sourceTree = "<group>"; };
+		4F854F5D1B5A714800894601 /* PSRCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRCoreDataTableViewController.h; sourceTree = "<group>"; };
+		4F854F5E1B5A714800894601 /* PSRCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRCoreDataTableViewController.m; sourceTree = "<group>"; };
 		75A3FCF3DEDD0ED7FDAFD811 /* Pods-HumorCollectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HumorCollectionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HumorCollectionTests/Pods-HumorCollectionTests.release.xcconfig"; sourceTree = "<group>"; };
 		7D04F3CCCBEE2A484A62EAB5 /* libPods-HumorCollection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HumorCollection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B23D05DE1BBB1C5C640F2C /* libPods-HumorCollectionTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HumorCollectionTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,8 +125,7 @@
 				4F854F161B5A33E000894601 /* AppDelegate.h */,
 				4F854F171B5A33E000894601 /* AppDelegate.m */,
 				4F854F1C1B5A33E000894601 /* Main.storyboard */,
-				4F854F3B1B5A436800894601 /* SitesViewController.h */,
-				4F854F3C1B5A436800894601 /* SitesViewController.m */,
+				4F854F601B5A717A00894601 /* ViewControllers */,
 				4F854F1F1B5A33E000894601 /* Images.xcassets */,
 				4F854F211B5A33E000894601 /* LaunchScreen.xib */,
 				4F854F121B5A33E000894601 /* Supporting Files */,
@@ -171,6 +173,17 @@
 				4F854F521B5A482800894601 /* PL2JokesSite.m */,
 			);
 			name = "New CoreData";
+			sourceTree = "<group>";
+		};
+		4F854F601B5A717A00894601 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F854F3B1B5A436800894601 /* SitesViewController.h */,
+				4F854F3C1B5A436800894601 /* SitesViewController.m */,
+				4F854F5D1B5A714800894601 /* PSRCoreDataTableViewController.h */,
+				4F854F5E1B5A714800894601 /* PSRCoreDataTableViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FA4EFCC59EA08510CA61747B /* Frameworks */ = {
@@ -352,6 +365,7 @@
 				4F854F591B5A482900894601 /* PL2JokeItem.m in Sources */,
 				4F854F3A1B5A414800894601 /* DataModel.xcdatamodeld in Sources */,
 				4F854F531B5A482800894601 /* PL2JokesSite.m in Sources */,
+				4F854F5F1B5A714800894601 /* PSRCoreDataTableViewController.m in Sources */,
 				4F854F561B5A482900894601 /* PL2JokeCategory.m in Sources */,
 				4F854F181B5A33E000894601 /* AppDelegate.m in Sources */,
 				4F854F151B5A33E000894601 /* main.m in Sources */,

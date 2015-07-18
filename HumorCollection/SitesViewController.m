@@ -13,19 +13,39 @@
 #import "AFNetworking.h"
 #import "MagicalRecord.h"
 
-@interface SitesViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-
-@end
-
 @implementation SitesViewController
+
+#pragma mark - Super
+
+- (NSString *)cellReuseIdentifier
+{
+    return @"SiteCell";
+}
+
+- (NSFetchRequest *)dataRequest
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass([PL2JokesSite class])];
+    
+//Сортировка
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name"
+                                                              ascending:YES]];
+    return request;
+}
+
+- (void)configureCell:(UITableViewCell *)aCell withItem:(PL2JokesSite *)item
+{
+    aCell.textLabel.text = item.name;
+}
+
+#pragma mark - View Controller Life Cycle
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     [self updateSites];
-    [self test];
 }
+
+#pragma mark - Data Update
 
 - (void)updateSites
 {
@@ -46,39 +66,6 @@
                 }
             }
 
-        } completion:^(BOOL contextDidSave, NSError *error) {
-            NSLog(@"updated: %@ sites in dataBase",[PL2JokesSite MR_numberOfEntities]);
-        }];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Ой! %@",error);
-    }];
-    [operation start];
-}
-
-- (void)test
-{
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:
-@"http://www.umori.li/api/get?site=bash.im&name=bash&num=100"]];
-    
-    
-    
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc]initWithRequest:request];
-    operation.responseSerializer = [AFJSONResponseSerializer new];
-    
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, NSArray *responseObject) {
-        NSLog(@"УРА!%@",responseObject);
-        
-        [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
-            
-            //Тут лежит массив из категорий сайта
-            for (NSArray *siteCategories in responseObject) {
-                //пробежимся по каждой категории
-                for (NSDictionary *json in siteCategories) {
-                    [PL2JokesSite siteFromJSON:json inContext:localContext];
-                }
-            }
-            
         } completion:^(BOOL contextDidSave, NSError *error) {
             NSLog(@"updated: %@ sites in dataBase",[PL2JokesSite MR_numberOfEntities]);
         }];

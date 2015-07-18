@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "PSRCoreDataTableViewController.h"
 
-
-@interface SitesViewController : UIViewController
+@interface SitesViewController : PSRCoreDataTableViewController
 
 @end

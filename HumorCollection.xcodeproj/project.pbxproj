@@ -27,6 +27,7 @@
 		4F854F721B5A987A00894601 /* PL2JokeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F854F711B5A987A00894601 /* PL2JokeItem.m */; };
 		4F854F751B5A987A00894601 /* PL2JokesSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F854F741B5A987A00894601 /* PL2JokesSite.m */; };
 		4F854F781B5A9C4D00894601 /* JokeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F854F771B5A9C4D00894601 /* JokeViewController.m */; };
+		70A547EF1B5D479B00F6F7A3 /* RandomJokesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A547EE1B5D479B00F6F7A3 /* RandomJokesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		4F854F741B5A987A00894601 /* PL2JokesSite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PL2JokesSite.m; sourceTree = "<group>"; };
 		4F854F761B5A9C4D00894601 /* JokeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeViewController.h; sourceTree = "<group>"; };
 		4F854F771B5A9C4D00894601 /* JokeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeViewController.m; sourceTree = "<group>"; };
+		70A547ED1B5D479B00F6F7A3 /* RandomJokesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomJokesViewController.h; sourceTree = "<group>"; };
+		70A547EE1B5D479B00F6F7A3 /* RandomJokesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomJokesViewController.m; sourceTree = "<group>"; };
 		75A3FCF3DEDD0ED7FDAFD811 /* Pods-HumorCollectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HumorCollectionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HumorCollectionTests/Pods-HumorCollectionTests.release.xcconfig"; sourceTree = "<group>"; };
 		7D04F3CCCBEE2A484A62EAB5 /* libPods-HumorCollection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HumorCollection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B23D05DE1BBB1C5C640F2C /* libPods-HumorCollectionTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HumorCollectionTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,10 +200,12 @@
 		4F854F601B5A717A00894601 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4F854F761B5A9C4D00894601 /* JokeViewController.h */,
-				4F854F771B5A9C4D00894601 /* JokeViewController.m */,
+				70A547ED1B5D479B00F6F7A3 /* RandomJokesViewController.h */,
+				70A547EE1B5D479B00F6F7A3 /* RandomJokesViewController.m */,
 				4F854F671B5A953400894601 /* JokesViewController.h */,
 				4F854F681B5A953400894601 /* JokesViewController.m */,
+				4F854F761B5A9C4D00894601 /* JokeViewController.h */,
+				4F854F771B5A9C4D00894601 /* JokeViewController.m */,
 				4F854F641B5A8C2000894601 /* CategoryViewController.h */,
 				4F854F651B5A8C2000894601 /* CategoryViewController.m */,
 				4F854F3B1B5A436800894601 /* SitesViewController.h */,
@@ -398,6 +403,7 @@
 				4F854F6F1B5A987900894601 /* PL2JokeCategory.m in Sources */,
 				4F854F3D1B5A436800894601 /* SitesViewController.m in Sources */,
 				4F854F751B5A987A00894601 /* PL2JokesSite.m in Sources */,
+				70A547EF1B5D479B00F6F7A3 /* RandomJokesViewController.m in Sources */,
 				4F854F5C1B5A52C600894601 /* PL2JokesSite+Parsing.m in Sources */,
 				4F854F721B5A987A00894601 /* PL2JokeItem.m in Sources */,
 				4F854F691B5A953400894601 /* JokesViewController.m in Sources */,

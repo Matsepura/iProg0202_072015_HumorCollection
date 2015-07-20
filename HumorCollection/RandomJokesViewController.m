@@ -19,27 +19,32 @@
 
 @implementation RandomJokesViewController
 
+- (IBAction)showRandomJoke:(UIButton *)sender {
+    [self getRandomJoke];
+}
+
 -(void)getRandomJoke
 {
     
     NSLog(@"pognali!");
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.umori.li/api/random?num=1"]];
+    NSString *urlrandom = [NSString stringWithFormat:@"http://www.umori.li/api/random?num=%u", arc4random() % 40];
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlrandom
+                                                  ]];
     NSError *error = nil;
     
-    NSDictionary *json = [[NSDictionary alloc] init];
-    json = [NSJSONSerialization JSONObjectWithData:data
+    NSArray *json = [NSJSONSerialization JSONObjectWithData:data
                                            options:0
                                              error:&error];
-    
+    NSLog(@"%@", json);
+    for (NSDictionary *randomJoke in json) {
+        NSString *elementPureHtml = randomJoke[@"elementPureHtml"];
+        
+        NSLog(@"%@", elementPureHtml);
+               // THE REST OF YOUR CODE
+        self.RandomJokeTextView.text = elementPureHtml;
+    }
     
 
-    NSLog(@"%@", [json objectForKey:@"site"]);
-    
-    NSLog(@"%@", json);
-    
-    
-    
-    
 }
 
 //-(NSString*) textOnRandomJokeTextView: (NSDictionary *)json
@@ -54,9 +59,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self getRandomJoke];
+    self.RandomJokeTextView.text = [NSString stringWithFormat:@" "];
     
-    self.RandomJokeTextView.text = [NSString stringWithFormat:@"111"];
+//    self.RandomJokeTextView.text = [NSString stringWithFormat:@"111"];
     // Do any additional setup after loading the view.
 }
 

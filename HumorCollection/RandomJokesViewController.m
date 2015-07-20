@@ -13,47 +13,49 @@
 
 @interface RandomJokesViewController ()
 
+@property (strong, nonatomic) NSDictionary *json;
+
 @end
 
 @implementation RandomJokesViewController
 
 -(void)getRandomJoke
 {
-    NSString *url = [NSString stringWithFormat:@"http://www.umori.li/api/random?num=1"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, NSArray *responseObject) {
-        NSLog(@"УРА!%@",responseObject);
-        NSArray *elementPureHtml = [[NSArray alloc] initWithObjects:@"elementPureHtml", nil];
-        
-        NSDictionary *json = [[NSDictionary alloc] initWithObjects:responseObject forKeys:elementPureHtml];
-        
-        self.RandomJokeTextView.text = [NSString stringWithFormat:@"1"];
-        
-//        initWithObjects:responseObject forKeys: @"elementPureHtml"
-        
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Ой! %@",error);
-    }];
+    
+    NSLog(@"pognali!");
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.umori.li/api/random?num=1"]];
+    NSError *error = nil;
+    
+    NSDictionary *json = [[NSDictionary alloc] init];
+    json = [NSJSONSerialization JSONObjectWithData:data
+                                           options:0
+                                             error:&error];
     
     
 
-         
+    NSLog(@"%@", [json objectForKey:@"site"]);
+    
+    NSLog(@"%@", json);
     
     
-    [operation start];
+    
     
 }
 
-
-
-
+//-(NSString*) textOnRandomJokeTextView: (NSDictionary *)json
+//{
+//    NSString *randomJoke = [NSString new];
+//    randomJoke = [NSString stringWithFormat:json[@"elementPureHtml"]];
+//    //self.RandomJokeTextView.text
+//    NSLog(@"%@", randomJoke);
+//    return randomJoke;
+//}
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self getRandomJoke];
+    
     self.RandomJokeTextView.text = [NSString stringWithFormat:@"111"];
     // Do any additional setup after loading the view.
 }
@@ -62,18 +64,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
- 
+
 
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-     
 @end
 
